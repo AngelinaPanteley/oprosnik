@@ -1,9 +1,179 @@
 <!DOCTYPE html5>
 <html>
 <head>
-  <link rel=stylesheet href="stylesheets/screen.css">
+  <meta charset="UTF-8"/>
+  <link rel=stylesheet href="stylesheets/screen.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=0">
+
 </head>
 <body>
+  <div class="wrapper">
 
+    <header class="header">
+      <div class="container">
+      	<h1>Опросник</h1>
+      </div>
+    </header>
+    <form class="main-form" id="main-form">
+    	<div class="container">
+    		<div class="main-form__block">
+    			<span>Телефон</span>
+    			<input class ="main-form__input" type="text" name="telephone" placeholder="+38 666 666 6"/>
+    		</div>
+    		<div class="main-form__block">
+    			<span>e-mail</span>
+    			<input class ="main-form__input" type="text" name="email" placeholder="gogogogba@gmail.com"/>
+    		</div>
+    		<div class="main-form__block">
+    			<span>steam-id</span>
+    			<input class ="main-form__input" type="text" name="steamid" placeholder="warotrum69"/>
+    		</div>
+    		<div class="main-form__block">
+          <span class="block">Пол</span>
+          <div class="row">
+          	<label class="main-form__label-radio"><input class ="main-form__radio" type="radio" name="gender" checked="checked" /><span class="main-form__span">Мужской</span></label>
+            <label class="main-form__label-radio"><input class ="main-form__radio" type="radio" name="gender"/><span class="main-form__span">Женский</span></label>
+          </div>
+    		</div>
+        <div class="main-form__block">
+          <span class="block margin-bot">Возраст</span>
+          <label class="main-form__label-radio-column"><input class ="main-form__radio-column" type="radio" name="age" checked="checked" /><span class="main-form__span">до 13</span></label>
+          <label class="main-form__label-radio-column"><input class ="main-form__radio-column" type="radio" name="age"  /><span class="main-form__span">13-16</span></label>
+          <label class="main-form__label-radio-column"><input class ="main-form__radio-column" type="radio" name="age"  /><span class="main-form__span">17-21</span></label>
+          <label class="main-form__label-radio-column"><input class ="main-form__radio-column" type="radio" name="age"  /><span class="main-form__span">22-25</span></label>
+          <label class="main-form__label-radio-column"><input class ="main-form__radio-column" type="radio" name="age"  /><span class="main-form__span">старше 25</span></label>
+        </div>
+        <div class="main-form__block">
+          <div class="main-form__question">
+            <div class="main-form__number">1</div>
+            <span>У меня есть доступ к скоростному интернету</span>
+          </div>
+          <div class="row">
+            <label class="main-form__label-radio"><input class ="main-form__radio" type="radio" name="internet-1"  /><span class="main-form__span" onclick="openbox('hidden-block-1')">Да</span></label>
+            <label class="main-form__label-radio"><input class ="main-form__radio" type="radio" name="internet-1" checked="checked"/><span class="main-form__span" onclick="hidebox('hidden-block-1')">Нет</span></label>
+          </div>
+        </div>
+        <div class="main-form__block main-form__hidden-block" id="hidden-block-1">
+          <span class="block">Достаточно ли его для сетевой игры?</span>
+          <div class="row">
+            <label class="main-form__label-radio"><input class ="main-form__radio" type="radio" name="internet-2" checked="checked" /><span class="main-form__span">Да</span></label>
+            <label class="main-form__label-radio"><input class ="main-form__radio" type="radio" name="internet-2"/><span class="main-form__span">Нет</span></label>
+          </div>
+        </div>
+        <div class="main-form__block">
+          <div class="main-form__question margin-bot">
+            <div class="main-form__number">2</div>
+            <span>Я играю</span>
+          </div>
+          <label class="main-form__label-radio-column"><input class ="main-form__radio-column" type="radio" name="periodicity-play" checked="checked" /><span class="main-form__span">ежедневно</span></label>
+          <label class="main-form__label-radio-column"><input class ="main-form__radio-column" type="radio" name="periodicity-play"  /><span class="main-form__span">2-3 раза в неделю</span></label>
+          <label class="main-form__label-radio-column"><input class ="main-form__radio-column" type="radio" name="periodicity-play"  /><span class="main-form__span">несколько раз в месяц</span></label>
+        </div>
+        <div class="main-form__block">
+          <div class="main-form__question margin-bot">
+            <div class="main-form__number">3</div>
+            <span>Моя игра обычно длится</span>
+          </div>
+          <label class="main-form__label-radio-column"><input class ="main-form__radio-column" type="radio" name="time-play" checked="checked" /><span class="main-form__span">до 1 часа</span></label>
+          <label class="main-form__label-radio-column"><input class ="main-form__radio-column" type="radio" name="time-play"  /><span class="main-form__span">1-3 часа</span></label>
+          <label class="main-form__label-radio-column"><input class ="main-form__radio-column" type="radio" name="time-play"  /><span class="main-form__span">3-5 часов</span></label>
+          <label class="main-form__label-radio-column"><input class ="main-form__radio-column" type="radio" name="time-play"  /><span class="main-form__span">более 5 часов</span></label>
+        </div>
+        <div class="main-form__block">
+          <div class="main-form__question margin-bot">
+            <div class="main-form__number">4</div>
+            <span>Я играю в</span>
+          </div>
+          <div class="main-form__icon-box">
+            <img src="trash/icon-1.png" onclick="openbox('hidden-block-2'); change_icon('trash/icon-1.png','changing-icon')"/>
+            <img src="trash/icon-2.png" onclick="openbox('hidden-block-2'); change_icon('trash/icon-2.png','changing-icon')"/>
+            <img src="trash/icon-3.png" onclick="openbox('hidden-block-2'); change_icon('trash/icon-3.png','changing-icon')"/>
+          </div>
+          <div class="main-form__icon-box margin-bot">
+            <img src="trash/icon-4.png" onclick="openbox('hidden-block-2'); change_icon('trash/icon-4.png','changing-icon')"/>
+            <img src="trash/icon-5.png" onclick="openbox('hidden-block-2'); change_icon('trash/icon-5.png','changing-icon')"/>
+            <img src="trash/icon-6.png" onclick="openbox('hidden-block-2'); change_icon('trash/icon-6.png','changing-icon')"/>
+          </div>
+          <input class ="main-form__input" type="text" name="game_name" placeholder="Варкрафт"/>
+        </div>
+        <div class="main-form__block main-form__hidden-block" id="hidden-block-2">
+          <img src="trash/icon-4.png" class="margin-bot" id="changing-icon"/>
+          <label class="main-form__label-radio-column"><input class ="main-form__radio-column" type="radio" name="device" checked="checked" /><span class="main-form__span">на компьютере</span></label>
+          <label class="main-form__label-radio-column"><input class ="main-form__radio-column" type="radio" name="device" /><span class="main-form__span">на мобильном</span></label>
+          <label class="main-form__label-radio-column"><input class ="main-form__radio-column" type="radio" name="device" /><span class="main-form__span">на планшете</span></label>
+        </div>
+        <div class="main-form__block">
+          <div class="main-form__question">
+            <div class="main-form__number">5</div>
+            <span>Я совершаю покупки в любимой игре</span>
+          </div>
+          <div class="row">
+            <label class="main-form__label-radio"><input class ="main-form__radio" type="radio" name="shopping" value="yes"  /><span class="main-form__span" onclick="openbox('hidden-block-3')" id="yes_1">Да</span></label>
+            <label class="main-form__label-radio"><input class ="main-form__radio" type="radio" name="shopping" value="no" checked="checked"/><span class="main-form__span" onclick="hidebox('hidden-block-3')">Нет</span></label>
+          </div>
+        </div>
+        <div class="main-form__block main-form__hidden-block" id="hidden-block-3">
+          <label class="main-form__label-radio-column"><input class ="main-form__radio-column" type="radio" name="time-shop" checked="checked" /><span class="main-form__span">иногда</span></label>
+          <label class="main-form__label-radio-column"><input class ="main-form__radio-column" type="radio" name="time-shop"  /><span class="main-form__span">редко</span></label>
+          <label class="main-form__label-radio-column dbl-margin-bot"><input class ="main-form__radio-column" type="radio" name="time-shop"  /><span class="main-form__span">регулярно</span></label>
+          <span>Средняя сумма покупки</span>
+          <input class ="main-form__input" type="text" name="sum" id="sum" placeholder="17 669"/>
+          <span id="valid" class="error"></span>
+        </div>
+        <div class="main-form__block">
+          <div class="main-form__question">
+            <div class="main-form__number">6</div>
+            <span>Я участвую в команде по любимой игре</span>
+          </div>
+          <div class="row">
+            <label class="main-form__label-radio"><input class ="main-form__radio" type="radio" name="team-game-1" checked="checked" /><span class="main-form__span">Да</span></label>
+            <label class="main-form__label-radio"><input class ="main-form__radio" type="radio" name="team-game-1"/><span class="main-form__span">Нет</span></label>
+          </div>
+        </div>
+        <div class="main-form__block no-indent">
+          <span>Я участвовал в кибертурнирах</span>
+          <div class="row">
+            <label class="main-form__label-radio"><input class ="main-form__radio" type="radio" name="team-game-2" checked="checked" /><span class="main-form__span">Да</span></label>
+            <label class="main-form__label-radio"><input class ="main-form__radio" type="radio" name="team-game-2"/><span class="main-form__span">Нет</span></label>
+          </div>
+        </div>
+        <div class="main-form__block no-indent">
+          <span>Я хотел бы поучаствовать в кибертурнире</span>
+          <div class="row">
+            <label class="main-form__label-radio"><input class ="main-form__radio" type="radio" name="team-game-3" checked="checked" /><span class="main-form__span">Да</span></label>
+            <label class="main-form__label-radio"><input class ="main-form__radio" type="radio" name="team-game-3"/><span class="main-form__span">Нет</span></label>
+          </div>
+        </div>
+        <div class="main-form__block">
+          <div class="main-form__question margin-bot">
+            <div class="main-form__number">7</div>
+            <span>Я смотрю стримы игр на</span>
+          </div>
+          <label class="main-form__label-radio-column"><input class ="main-form__radio-column" type="radio" name="service" checked="checked" /><span class="main-form__span">Twitch</span></label>
+          <label class="main-form__label-radio-column margin-bot"><input class ="main-form__radio-column" type="radio" name="service"  /><span class="main-form__span">YouTube</span></label>
+          <input class ="main-form__input" type="text" name="service" placeholder="Указать другой сервис"/>
+        </div>
+        <div class="main-form__block">
+          <div class="main-form__question">
+            <div class="main-form__number">8</div>
+            <span>Я хотел бы стать членом киберспортивного клуба "Киевстар", в котором смогу участвовать в турнирах с денежными призами, получать игровые предметы за активность, встречаться со своими кумирами и находить новых друзей, членов команды и соперников</span>
+          </div>
+          <div class="row">
+            <label class="main-form__label-radio"><input class ="main-form__radio" type="radio" name="want-to-join" checked="checked" /><span class="main-form__span">Да</span></label>
+            <label class="main-form__label-radio"><input class ="main-form__radio" type="radio" name="want-to-join"/><span class="main-form__span">Нет</span></label>
+          </div>
+        </div>
+        <div class="main-form__block">
+            <span class="margin-bot block">Ваш комментарий</span>
+            <textarea class="main-form__comment-box" placeholder="Хотелось бы оплачивать членские взносы в кредит, потому что моё финансовое положение не позволяет мне"></textarea>
+        </div>
+        <input class="vote-button" type="submit" name="vote-btn" id ="vote-btn" value="голосовать"/>
+    	</div>
+    </form>
+  </div>
+  <script type="text/javascript" src="scripts/main.js"></script>
+  <script type="text/javascript" src="scripts/jquery-1.5.2.min.js"></script>
+  <script type="text/javascript" src="scripts/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="scripts/my-validate.js"></script>
 </body>
 </html>

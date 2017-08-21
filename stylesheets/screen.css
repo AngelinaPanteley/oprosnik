@@ -67,13 +67,371 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 15, ../sass/screen.scss */
-body {
-  background-color: red;
+/*base*/
+/* line 18, ../sass/screen.scss */
+input {
+  border: 0px;
 }
 
-/* line 19, ../sass/screen.scss */
+/* line 22, ../sass/screen.scss */
+input[type="radio"] {
+  cursor: pointer;
+}
+
+/* line 26, ../sass/screen.scss */
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+/* line 32, ../sass/screen.scss */
+html {
+  font-size: 100%;
+  line-height: 100%;
+}
+
+/* line 37, ../sass/screen.scss */
+body {
+  font-family: 'Museo Sans Cyrl', sans-serif;
+  font-size: 40px;
+  line-height: 50px;
+  color: #009fe3;
+}
+
+/* line 44, ../sass/screen.scss */
+.wrapper {
+  width: 100%;
+}
+
+/* line 48, ../sass/screen.scss */
+.container {
+  width: 570px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* line 54, ../sass/screen.scss */
+.row:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* line 60, ../sass/screen.scss */
+.left {
+  float: left;
+}
+
+/* line 64, ../sass/screen.scss */
+.right {
+  float: right;
+}
+
+/* line 68, ../sass/screen.scss */
+.block {
+  display: block;
+}
+
+/* line 72, ../sass/screen.scss */
+.margin-bot {
+  margin-bottom: 17px;
+}
+
+/* line 76, ../sass/screen.scss */
+.dbl-margin-bot {
+  margin-bottom: 80px;
+}
+
+/*typography*/
+/* line 82, ../sass/screen.scss */
+b,
+strong {
+  font-weight: 600;
+}
+
+/* line 87, ../sass/screen.scss */
+i,
+em {
+  font-style: italic;
+}
+
+/* line 92, ../sass/screen.scss */
+ul li,
+ol li {
+  list-style-type: none;
+}
+
+/* line 98, ../sass/screen.scss */
 h1 {
-  font-size: 35px;
-  color: #c8c8c8;
+  font-weight: 300;
+  font-size: 60px;
+  line-height: 62px;
+  color: #ffffff;
+}
+
+/*header*/
+/* line 108, ../sass/screen.scss */
+.header {
+  background-color: #009fe3;
+  padding: 86px 63px 56px 63px;
+  text-indent: 25px;
+}
+
+/*main-form*/
+/* line 116, ../sass/screen.scss */
+.main-form {
+  padding-top: 60px;
+}
+
+/* line 120, ../sass/screen.scss */
+.main-form__input,
+.main-form__radio {
+  border: 3px solid #fecf22;
+  display: block;
+  border-radius: 8px;
+  margin-top: 17px;
+  width: 100%;
+  height: 85px;
+  color: #009fe3;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 79px;
+  padding-left: 18px;
+  outline: none;
+}
+
+/* line 136, ../sass/screen.scss */
+.main-form__block {
+  margin-bottom: 55px;
+  text-indent: 25px;
+  position: relative;
+  transition: all .3s ease-out 0s;
+}
+
+/* line 143, ../sass/screen.scss */
+.main-form__label-radio {
+  margin-top: 17px;
+  position: relative;
+  width: 50%;
+  float: left;
+  height: 85px;
+  text-align: center;
+  vertical-align: middle;
+  text-indent: 0px;
+}
+
+/* line 154, ../sass/screen.scss */
+.main-form__radio {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  margin-top: 0px;
+}
+
+/* line 164, ../sass/screen.scss */
+.main-form__span {
+  padding-top: 13px;
+  display: inline-block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 174, ../sass/screen.scss */
+.main-form__radio-column + .main-form__span {
+  border-bottom: 3px solid #bbbaba;
+}
+
+/* line 178, ../sass/screen.scss */
+.main-form__radio:checked + .main-form__span,
+.main-form__radio-column:checked + .main-form__span {
+  border: 3px solid #fecf22;
+  border-radius: 8px;
+}
+
+/* line 184, ../sass/screen.scss */
+.main-form__radio-column:checked + .main-form__span {
+  position: absolute;
+  top: -3px;
+  box-shadow: 0 0 0 5px #ffffff;
+  z-index: 2;
+}
+
+/* line 191, ../sass/screen.scss */
+.main-form__label-radio-column {
+  position: relative;
+  display: block;
+  height: 85px;
+  vertical-align: middle;
+  text-indent: 20px;
+}
+
+/* line 199, ../sass/screen.scss */
+.main-form__radio-column {
+  opacity: 0;
+}
+
+/* line 203, ../sass/screen.scss */
+.main-form__number {
+  height: 62px;
+  width: 62px;
+  border-radius: 50%;
+  background-color: #fecf22;
+  display: inline-block;
+  text-align: center;
+  padding-top: 9px;
+  text-indent: 0px;
+  position: absolute;
+  left: 0;
+  top: -8px;
+}
+
+/* line 217, ../sass/screen.scss */
+.main-form__question {
+  text-indent: 0px;
+  padding-left: 23px;
+  text-indent: 50px;
+  display: block;
+  position: relative;
+}
+
+/* line 225, ../sass/screen.scss */
+.main-form__hidden-block {
+  text-indent: 0px;
+  display: none;
+  transition: all .3s ease-out 0s;
+}
+
+/* line 231, ../sass/screen.scss */
+.main-form__comment-box {
+  border-radius: 8px;
+  border: 3px solid #fecf22;
+  width: 100%;
+  height: 380px;
+  outline: none;
+  font-size: 40px;
+  color: #009fe3;
+  resize: none;
+  padding-left: 18px;
+}
+
+/* line 243, ../sass/screen.scss */
+.vote-button {
+  margin: 50px 0 115px 0;
+  width: 100%;
+  border-radius: 85px;
+  background-color: #fecf22;
+  color: #000000;
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 125px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* line 256, ../sass/screen.scss */
+.vote-button:active {
+  box-shadow: 0 3px 5px #000000;
+}
+
+/* line 260, ../sass/screen.scss */
+.main-form__icon-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 26px 0 26px 0;
+}
+
+/* line 269, ../sass/screen.scss */
+.no-indent {
+  text-indent: 0px;
+}
+
+/* line 273, ../sass/screen.scss */
+.open-block {
+  display: block;
+}
+
+/*validation*/
+/* line 280, ../sass/screen.scss */
+.error {
+  font-size: 25px;
+}
+
+/* line 284, ../sass/screen.scss */
+.main-form__input {
+  font-size: 40px;
+}
+
+/* line 288, ../sass/screen.scss */
+.error {
+  color: red;
+}
+
+/*mobile styles*/
+@media all and (max-width: 680px) {
+  /* line 295, ../sass/screen.scss */
+  .container {
+    width: 90%;
+  }
+
+  /* line 299, ../sass/screen.scss */
+  .header {
+    padding-left: 0px;
+  }
+
+  /* line 303, ../sass/screen.scss */
+  .body, span, input[type="text"],
+  .main-form__number, input[type="submit"],
+  .main-form__comment-box {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  /* line 310, ../sass/screen.scss */
+  input[type="submit"] {
+    line-height: 60px;
+  }
+
+  /* line 314, ../sass/screen.scss */
+  .main-form__number {
+    height: 40px;
+    width: 40px;
+    padding-top: 7px;
+    top: -10px;
+  }
+
+  /* line 321, ../sass/screen.scss */
+  h1 {
+    font-size: 40px;
+  }
+
+  /* line 325, ../sass/screen.scss */
+  .header {
+    height: 120px;
+    padding-top: 40px;
+  }
+
+  /* line 330, ../sass/screen.scss */
+  input[type="text"],
+  .main-form__label-radio,
+  .main-form__label-radio-column,
+  .main-form__span {
+    height: 50px;
+    wrap: nowrap;
+    padding-top: 5px;
+  }
+
+  /* line 339, ../sass/screen.scss */
+  img {
+    width: 67px;
+    height: 67px;
+  }
 }

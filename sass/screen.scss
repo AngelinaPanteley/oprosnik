@@ -9,3 +9,335 @@
 @import "compass/typography";
 @import "compass/utilities";
 
+
+$yellow: #fecf22;
+$blue: #009fe3;
+
+/*base*/
+
+input {
+	border:0px;
+}
+
+input[type="radio"] {
+  cursor: pointer;
+}
+
+*,
+*:after,
+*:before {
+	box-sizing:border-box;
+}
+
+html {
+  font-size: 100%;
+  line-height: 100%;
+}
+
+body {
+  font-family: 'Museo Sans Cyrl', sans-serif;
+  font-size: 40px;
+  line-height: 50px;
+  color:#009fe3;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.container {
+  width: 570px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.row:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.block {
+	display:block;
+}
+
+.margin-bot {
+	margin-bottom: 17px;
+}
+
+.dbl-margin-bot {
+	margin-bottom: 80px;
+}
+
+/*typography*/
+
+b,
+strong {
+  font-weight: 600;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+ul li,
+ol li {
+  list-style-type: none;
+}
+
+
+h1 {
+  font-weight: 300;
+  font-size: 60px;
+  line-height: 62px;
+  color: #ffffff;
+}
+
+
+/*header*/
+
+.header {
+  background-color: #009fe3;
+  padding: 86px 63px 56px 63px;
+  text-indent: 25px;
+}
+
+/*main-form*/
+
+.main-form {
+    padding-top: 60px;
+}
+
+.main-form__input,
+.main-form__radio {
+    border: 3px solid #fecf22;
+    display: block;
+    border-radius: 8px;
+    margin-top: 17px;
+    width: 100%;
+    height: 85px;
+    color: $blue;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 79px;
+    padding-left: 18px;
+    outline: none;
+}
+
+.main-form__block {
+    margin-bottom: 55px;
+    text-indent: 25px;
+    position:relative;
+    transition: all .3s ease-out 0s;
+}
+
+.main-form__label-radio {
+	  margin-top:17px;
+    position: relative;
+    width: 50%;
+    float: left;
+    height: 85px;
+    text-align: center;
+    vertical-align: middle;
+    text-indent: 0px;
+}
+
+.main-form__radio {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    margin-top:0px;
+}
+
+.main-form__span {
+	  padding-top:13px;
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.main-form__radio-column+.main-form__span {
+	  border-bottom: 3px solid #bbbaba;
+}
+
+.main-form__radio:checked+.main-form__span,
+.main-form__radio-column:checked+.main-form__span {
+    border: 3px solid $yellow;
+    border-radius: 8px;
+}
+
+.main-form__radio-column:checked+.main-form__span {
+    position: absolute;
+	  top: -3px;
+    box-shadow: 0 0 0 5px #ffffff;
+	  z-index: 2;
+}
+
+.main-form__label-radio-column {
+    position: relative;
+    display: block;
+    height: 85px;
+    vertical-align: middle;
+    text-indent: 20px;
+}
+
+.main-form__radio-column {
+    opacity: 0;
+}
+
+.main-form__number {
+	  height: 62px;
+    width: 62px;
+    border-radius: 50%;
+    background-color: #fecf22;
+    display: inline-block;
+    text-align: center;
+    padding-top: 9px;
+    text-indent: 0px;
+    position: absolute;
+    left: 0;
+    top: -8px;
+}
+
+.main-form__question {
+	text-indent:0px;
+	padding-left: 23px;
+	text-indent: 50px;
+	display:block;
+	position:relative;
+}
+
+.main-form__hidden-block {
+	text-indent:0px;
+	display: none;
+  transition: all .3s ease-out 0s;
+}
+
+.main-form__comment-box {
+	border-radius:8px;
+	border: 3px solid $yellow;
+  width: 100%;
+  height: 380px;
+  outline: none;
+  font-size: 40px;
+  color:$blue;
+  resize: none;
+  padding-left: 18px;
+}
+
+.vote-button {
+  margin: 50px 0 115px 0;
+  width: 100%;
+  border-radius:85px;
+  background-color: $yellow;
+  color: #000000;
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 125px;
+  outline: none;
+  cursor: pointer;
+}
+
+.vote-button:active {
+	box-shadow: 0 3px 5px #000000;
+}
+
+.main-form__icon-box {
+	display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 26px 0 26px 0;
+}
+
+
+.no-indent {
+  text-indent: 0px;
+}
+
+.open-block {
+	display:block;
+}
+
+
+/*validation*/
+
+.error {
+  font-size: 25px;
+}
+
+.main-form__input {
+  font-size: 40px;
+}
+
+.error {
+  color: red;
+}
+
+/*mobile styles*/
+
+@media all and (max-width: 680px) {
+  .container {
+    width: 90%;
+  }
+
+  .header {
+  	padding-left:0px;
+  }
+
+  .body, span, input[type="text"],
+  .main-form__number, input[type="submit"],
+  .main-form__comment-box {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  input[type="submit"] {
+    line-height: 60px;
+  }
+
+  .main-form__number {
+    height: 40px;
+    width: 40px;
+    padding-top: 7px;
+    top: -10px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .header {
+    height: 120px;
+    padding-top:40px;
+  }
+
+  input[type="text"],
+  .main-form__label-radio,
+  .main-form__label-radio-column,
+  .main-form__span {
+    height: 50px;
+    wrap: nowrap;
+    padding-top: 5px;
+  }
+
+  img{
+    width: 67px;
+    height: 67px;
+  }
+}
